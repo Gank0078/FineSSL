@@ -61,11 +61,10 @@ We thank the authors of the [PEL](https://github.com/shijxcs/PEL) for making t
 ## Citation
 
 ```
-@article{gan2024erasing,
+@inproceedings{ganerasing,
   title={Erasing the Bias: Fine-Tuning Foundation Models for Semi-Supervised Learning},
   author={Gan, Kai and Wei, Tong},
-  journal={arXiv preprint arXiv:2405.11756},
-  year={2024}
+  booktitle={Forty-first International Conference on Machine Learning}
 }
 ```
 
