@@ -1,6 +1,6 @@
 # [ICML 2024] Erasing the Bias: Fine-Tuning Foundation Models for Semi-Supervised Learning
 
-This is PyTorch implementation of Erasing the Bias: Fine-Tuning Foundation Models for Semi-Supervised Learning at ICML 2024. 
+This is PyTorch implementation of [Erasing the Bias: Fine-Tuning Foundation Models for Semi-Supervised Learning](https://arxiv.org/pdf/2405.11756) at ICML 2024. 
 
 ## Abstract
 
