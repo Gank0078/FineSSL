@@ -1,0 +1,52 @@
+dataset: "Semi_Aves"
+root: "../datasets/Semi-Aves"
+backbone: "ViT-B/16"
+resolution: 224
+stride: 16
+
+output_dir: null
+resume: null
+checkpoint_freq: 0
+print_freq: 10
+
+seed: null
+deterministic: False
+gpu: 0
+num_workers: 8
+prec: "fp16"
+
+num_epochs: 30
+lr: 0.03
+weight_decay: 5e-4
+momentum: 0.9
+
+tau: 1.0
+downsampling: True
+n_max: 100
+test_ensemble: True
+
+DATA:
+  NAME: "Semi_Aves"
+  DATAPATH: "../datasets/Semi-Aves"
+  NUMBER_CLASSES: 200
+  BATCH_SIZE: 32
+  MU_U: 1
+#  LABEL_RATIO: 0.01
+  out_ulab: False
+
+bias_tuning: False
+vpt_shallow: False
+vpt_deep: True
+#vpt_len: 10
+vpt_len: 50
+adapter: False
+adapter_dim: 8
+lora: False
+lora_dim: 8
+ssf: False
+
+th: 0.7
+mode: 0
+alpha: 8.0
+w_con: 3.0
+smoothing: 0.5
