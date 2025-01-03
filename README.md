@@ -54,6 +54,34 @@ python main.py --cfg configs/peft/cifar100_N25.yaml vpt_deep True
 python main.py --cfg configs/peft/cifar100_N100.yaml vpt_deep True
 ```
 
+Train FineSSL under SemiKD framework.
+
+For CIFAR-10:
+
+```
+# run N1 setting with VPT
+python main.py --cfg configs/peft/cifar10_N1_kd.yaml KD True vpt_deep True stu_backbone "IN21K-ViT-S/16" stu_vpt_deep True stu_vpt_len 50 resume "path to teacher model checkpoint"
+
+# run N2 setting with VPT
+python main.py --cfg configs/peft/cifar10_N2_kd.yaml KD True vpt_deep True stu_backbone "IN21K-ViT-S/16" stu_vpt_deep True stu_vpt_len 50 resume "path to teacher model checkpoint"
+
+# run N4 setting with VPT
+python main.py --cfg configs/peft/cifar10_N4_kd.yaml KD True vpt_deep True stu_backbone "IN21K-ViT-S/16" stu_vpt_deep True stu_vpt_len 50 resume "path to teacher model checkpoint"
+```
+For CIFAR-100:
+
+```
+# run N4 setting with VPT
+python main.py --cfg configs/peft/cifar100_N4_kd.yaml KD True vpt_deep True stu_backbone "IN21K-ViT-S/16" stu_vpt_deep True stu_vpt_len 50 resume "path to teacher model checkpoint"
+
+# run N25 setting with VPT
+python main.py --cfg configs/peft/cifar100_N25_kd.yaml KD True vpt_deep True stu_backbone "IN21K-ViT-S/16" stu_vpt_deep True stu_vpt_len 50 resume "path to teacher model checkpoint"
+
+# run N100 setting with VPT
+python main.py --cfg configs/peft/cifar100_N100_kd.yaml KD True vpt_deep True stu_backbone "IN21K-ViT-S/16" stu_vpt_deep True stu_vpt_len 50 resume "path to teacher model checkpoint"
+```
+
+
 ## Acknowledge
 
 We thank the authors of the [PEL](https://github.com/shijxcs/PEL) for making their code available to the public.
