@@ -89,3 +89,19 @@ _C.total_steps = 500
 _C.rand_init = True
 _C.rand_init1 = True
 _C.smoothing = 0.1
+
+_C.KD = False
+_C.extval = 0.0
+
+_C.stu_finetune = False
+_C.stu_vpt_deep = False
+_C.stu_vpt_len = 50
+_C.stu_adaptformer = False
+_C.stu_adapter = False
+_C.stu_lora = False
+_C.stu_backbone = "IN21K-ViT-S/16"
+
+_C.ep_ws = 10
+_C.beta = 0.99
+_C.Tr = 1.0
+_C.s_con = 1.0

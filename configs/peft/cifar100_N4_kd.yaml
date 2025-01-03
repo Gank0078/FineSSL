@@ -1,0 +1,59 @@
+dataset: "CIFAR100"
+root: "../datasets/cifar-100"
+backbone: "ViT-B/16"
+resolution: 32
+stride: 16
+
+output_dir: "out/cifar-100-kd/N4"
+resume: null
+checkpoint_freq: 0
+print_freq: 10
+
+seed: null
+deterministic: False
+gpu: null
+num_workers: 8
+prec: "fp16"
+
+num_epochs: 30
+lr: 0.03
+weight_decay: 5e-4
+momentum: 0.9
+
+DATA:
+  NAME: "CIFAR100"
+  DATAPATH: "../datasets/cifar-100"  #TODO: need to specify here
+  NUMBER_CLASSES: 100
+  NUM_L: 4
+  NUM_U: 500
+  IMB_L: 1.0
+  IMB_U: 1.0
+  MU_U: 2
+  BATCH_SIZE: 32
+
+finetune: False
+bias_tuning: False
+vpt_shallow: False
+vpt_deep: False
+vpt_last: False
+lam_tokens: 1.0
+
+vpt_len: 50
+adapter: False
+adapter_dim: 8
+lora: False
+lora_dim: 16
+ssf: False
+
+th: 0.7
+mode: 0
+alpha: 10.0
+smoothing: 0.5
+
+stu_backbone: "IN21K-ViT-S/16"
+stu_vpt_deep: True
+stu_vpt_len: 50
+beta: 0.99
+w_con: 5.0
+s_con: 1.0
+

@@ -7,7 +7,7 @@ import torch
 from utils.config import _C as cfg
 from utils.logger import setup_logger
 
-from trainer import Trainer
+# from trainer import Trainer
 
 
 def main(args):
@@ -15,6 +15,11 @@ def main(args):
     cfg.merge_from_file(args.cfg)
     cfg.merge_from_list(args.opts)
     # cfg.freeze()
+
+    if cfg.KD:
+        from trainer_kd import Trainer
+    else:
+        from trainer import Trainer
 
     if cfg.seed is not None:
         seed = cfg.seed

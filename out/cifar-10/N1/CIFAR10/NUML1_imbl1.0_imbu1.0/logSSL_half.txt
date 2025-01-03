@@ -1,0 +1,1 @@
+tea ws	stu ws	ratio	le 1.0 count	tea le0.1	stu le0.1	epoch	

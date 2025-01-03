@@ -514,7 +514,7 @@ class ImageNet(ImageFolder):
         self.imgs = np.array(self.imgs)
         self.targets = np.array(self.targets)
 
-        with open('../datasets/ImageNet_LT/imagenet-simple-labels.json') as f:
+        with open('/ImageNet_LT/imagenet-simple-labels.json') as f:
             self.classes = json.load(f)
 
         if indexs is not None:
@@ -816,7 +816,7 @@ def get_imagenet_lt(cfg):
 
     labeled_ratio = 0.25
 
-    num_per_cls = np.load('../datasets/ImageNet_LT/num_per_cls.npy')
+    num_per_cls = np.load('/ImageNet_LT/num_per_cls.npy')
     num_per_cls = num_per_cls.tolist()
     num_labeled_per_cls = [math.ceil(num_per_cls[idx] * labeled_ratio) for idx in range(cfg.DATA.NUMBER_CLASSES)]
 
@@ -945,7 +945,7 @@ class semi_ImageNet(ImageFolder):
 
             self.targets, self.samples = np.array(new_targets), np.array(new_samples)
 
-        with open('../datasets/ImageNet_LT/imagenet-simple-labels.json') as f:
+        with open('/ImageNet_LT/imagenet-simple-labels.json') as f:
             self.classes = json.load(f)
 
 
@@ -1343,7 +1343,7 @@ def get_cub(cfg):
 class Conceptual_Captions(Dataset):
     def __init__(self):
         self.data = []
-        file_path = '../datasets/Conceptual_Captions/Train_GCC-training.tsv'
+        file_path = '/Conceptual_Captions/Train_GCC-training.tsv'
         with open(file_path, 'r', encoding='utf-8') as tsvfile:
             reader = csv.reader(tsvfile, delimiter='\t')
             # next(reader, None)
