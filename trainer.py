@@ -317,9 +317,16 @@ class Trainer:
                 loss.backward()
                 self.optim.step()
 
+                with torch.no_grad():
+                    pred = output_x.argmax(dim=1)
+                    correct = pred.eq(targets_x).float()
+                    acc = correct.mean().mul_(100.0)
+
                 current_logit_scale = self.tuner.head.logit_scale.item()
                 current_lr = self.optim.param_groups[0]["lr"]
                 loss_meter.update(loss.item())
+
+                acc_meter.update(acc.item())
 
                 batch_time.update(time.time() - end)
 
